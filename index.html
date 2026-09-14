@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio of Aldiansyah Anugrah Ramadhan — AI, Data Engineering, and Software Engineering.">
-  <title>Aldiansyah Anugrah Ramadhan | Portfolio</title>
+  <title>Aldi's Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,11 +12,10 @@
     <nav class="nav container">
       <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
       <div class="nav-links">
-        <a href="#about">About</a>
+        <a href="#about">About Me</a>
         <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
+        <a href="#experience">Experiences</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
       </div>
     </nav>
   </header>
@@ -25,15 +24,30 @@
     <section id="home" class="hero">
       <div class="container hero-grid">
         <div>
-          <p class="eyebrow">AI • DATA • SOFTWARE ENGINEERING</p>
           <h1>Aldiansyah<br><span>Anugrah Ramadhan</span></h1>
-          <p class="hero-text">
+          <div>
+            <p class="hero-text">
             Master’s graduate in Computational Science from Bandung Institute of Technology (ITB),
-            with experiences in AI, data engineering, and software engineering.
+            with experience in AI, data engineering, and software engineering.
           </p>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/Aldiansyah-ar"><img src="https://skillicons.dev/icons?i=github" alt="GitHub" /></a>
+            <a href="https://linkedin.com/in/aldiansyah-ar"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" /></a>
+            <a href="mailto:aldiansyahaldi621@gmail.com"><img src="https://skillicons.dev/icons?i=gmail" alt="Email" /></a>
+            <a href="https://wa.me/6281394986468"><img src="assets/icons/whatsapp.png" width="48" height="48" alt="WhatsApp" /></a>
+            <a href="https://instagram.com/aldi.okidoki"><img src="https://skillicons.dev/icons?i=instagram" alt="Instagram" /></a>
+          </div>
           <div class="hero-actions">
-            <a class="btn primary" href="#projects">View Projects</a>
-            <a class="btn secondary" href="#contact">Contact Me</a>
+            <a class="btn cv" href="#projects">View Projects</a>
+            <a class="btn cv" href="/assets/documents/CV Aldiansyah Anugrah Ramadhan.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Download CV
+            </a>
           </div>
         </div>
       </div>
@@ -42,8 +56,7 @@
     <section id="about" class="section">
       <div class="container two-col">
         <div>
-          <p class="section-label">About</p>
-          <h2>Turning technical knowledge into practical solutions.</h2>
+          <h2>About Me</h2>
         </div>
         <div class="content">
           <p>
@@ -64,42 +77,47 @@
       </div>
     </section>
 
-    <section id="education" class="section alt">
+    <section id="education" class="section">
       <div class="container">
-        <p class="section-label">Education</p>
-        <h2>Academic background</h2>
+        <h2>Education</h2>
         <div class="timeline">
           <article class="timeline-item">
-            <span class="year">2025–2026</span>
-            <div>
+            <div class="timeline-marker">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="year">Feb 2025–Aug 2026</span>
               <h3>Master of Sciences in Computational Science</h3>
               <p class="muted">Bandung Institute of Technology, Indonesia</p>
               <p><strong>Thesis:</strong> Development of The Finite Difference Method for Vorticity Flow Simulation.</p>
-              <p class="small">Relevant courses: Computational Science Methods, Python Programming, Numerical Analysis, Algorithm and Programming in Science.</p>
               <a class="text-link" href="https://github.com/Aldiansyah-ar/Thesis" target="_blank" rel="noopener">Thesis Repository ↗</a>
             </div>
           </article>
           <article class="timeline-item">
-            <span class="year">2016–2021</span>
-            <div>
+            <div class="timeline-marker">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="year">Aug 2016–Apr 2021</span>
               <h3>Bachelor of Sciences in Physics</h3>
               <p class="muted">Bandung Institute of Technology, Indonesia</p>
               <p><strong>Final Project:</strong> Gravitational Waves in The F(R) Gravity Theory Framework.</p>
-              <p class="small">Relevant courses: Mathematical Methods in Physics, Modern Physics, Special Relativity, General Relativity, Linear Algebra.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="section alt">
+    <section id="experience" class="section">
       <div class="container">
-        <p class="section-label">Experience</p>
-        <h2>Professional & other experience</h2>
+        <h2>Experiences</h2>
         <div class="timeline">
           <article class="timeline-item">
-            <span class="year">Aug 2023–Jan 2024</span>
-            <div>
+            <div class="timeline-marker">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="year">Aug 2023–Jan 2024</span>
               <h3>PT. Steradian Data Optima</h3>
               <p class="muted">Data Scientist</p>
               <p class="small">Jakarta, Indonesia</p>
@@ -111,8 +129,11 @@
             </div>
           </article>
           <article class="timeline-item">
-            <span class="year">Apr 2022–Jun 2023</span>
-            <div>
+            <div class="timeline-marker">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="year">Apr 2022–Jun 2023</span>
               <h3>Al-Bahjah Islamic Senior High School</h3>
               <p class="muted">Physics Teacher</p>
               <p class="small">Cirebon, Indonesia</p>
@@ -122,8 +143,11 @@
             </div>
           </article>
           <article class="timeline-item">
-            <span class="year">Jun 2025–Aug 2025</span>
-            <div>
+            <div class="timeline-marker">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="year">Jun 2025–Aug 2025</span>
               <h3>Korea-ASEAN Digital Academy (KADA)</h3>
               <p class="muted">Participant</p>
               <p class="small">Cikarang, Indonesia</p>
@@ -136,12 +160,15 @@
                   Developed a web application for AI-powered interview preparation using the MERN stack, integrating the Gemini API to dynamically generate
                   IT-related interview questions, perform resume screening, enable live coding sessions, and provide model answers.
                 </li>
-            </ul>
+              </ul>
             </div>
           </article>
           <article class="timeline-item">
-            <span class="year">Apr 2025–Apr 2026</span>
-            <div>
+            <div class="timeline-marker">
+              <span class="timeline-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <span class="year">Apr 2025–Apr 2026</span>
               <h3>Bandung Institute of Technology</h3>
               <p class="muted">Titian Karir Terpadu Assistant</p>
               <p class="small">Bandung, Indonesia</p>
@@ -158,11 +185,9 @@
 
     <section id="projects" class="section">
       <div class="container">
-        <p class="section-label">Projects</p>
-        <h2>Selected work</h2>
+        <h2>Project</h2>
         <div class="project-grid">
-          <article class="project featured">
-            <div class="project-number">1</div>
+          <article class="project">
             <div>
               <p class="tag">MERN · AI Engineering</p>
               <h3>Hired Ready</h3>
@@ -176,8 +201,7 @@
             </div>
           </article>
 
-          <article class="project featured">
-            <div class="project-number">2</div>
+          <article class="project">
             <div>
               <p class="tag">Deep Learning</p>
               <h3>Classification of Buy, Hold, and Sell Points for US Electronics Company Stocks Using Convolutional Neural Networks</h3>
@@ -191,8 +215,7 @@
             </div> 
           </article>
 
-          <article class="project featured">
-            <div class="project-number">3</div>
+          <article class="project">
             <div>
               <p class="tag">Machine Learning · Deep Learning</p>
               <h3>Photometric Redshift Estimation Using Regression</h3>
@@ -207,20 +230,6 @@
         </div>
       </div>
     </section>
-
-    <section id="contact" class="contact-section">
-      <div class="container contact-inner">
-        <p class="section-label">Contact</p>
-        <h2>Let’s build something useful.</h2>
-        <p>Interested in AI, data engineering, or software engineering opportunities? Get in touch.</p>
-        <a class="btn primary" href="mailto:aldiansyahaldi621@gmail.com">aldiansyahaldi621@gmail.com ↗</a>
-        <div class="socials">
-          <a href="https://github.com/Aldiansyah-ar" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://linkedin.com/in/aldiansyah-ar" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-    </section>
-  </main>
 
   <footer><div class="container">© <span id="year"></span> Aldiansyah Anugrah Ramadhan</div></footer>
   <script src="script.js"></script>
