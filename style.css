@@ -192,7 +192,6 @@ h3 {
   margin-top: 18px;
 }
 
-/* ---------- Chips ---------- */
 .chips {
   display: flex;
   flex-wrap: wrap;
@@ -206,7 +205,6 @@ h3 {
   font: .7rem "DM Mono";
 }
 
-/* ---------- Education & Experience list ---------- */
 .entry-list {
   display: grid;
   gap: 20px;
@@ -294,7 +292,6 @@ footer {
   font: .7rem "DM Mono";
 }
 
-/* ---------- GitHub repos status ---------- */
 .repos-status {
   font-size: .9rem;
   opacity: .75;
@@ -314,7 +311,6 @@ footer {
   text-decoration: underline;
 }
 
-/* ---------- Responsive ---------- */
 @media (max-width: 800px) {
   .nav-links {
     display: none;

@@ -22,7 +22,7 @@ const EXCLUDED_REPOS = new Set([
 const repoContainer = document.getElementById("github-repos");
 const repoStatus = document.getElementById("github-repos-status");
 
-
+/* ---------- Helpers ---------- */
 function formatDate(iso) {
   return new Date(iso).toLocaleDateString("en-US", {
     year: "numeric",
@@ -37,6 +37,16 @@ function escapeHtml(str = "") {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+}
+
+function formatRepoName(name = "") {
+  return name
+    .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+    .replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
+    .replace(/[-_.]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
 function createRepoCard(repo) {
@@ -63,7 +73,7 @@ function createRepoCard(repo) {
   article.innerHTML = `
     <div>
       <p class="tag">Updated ${formatDate(repo.updated_at)}</p>
-      <h3>${escapeHtml(repo.name)}</h3>
+      <h3>${escapeHtml(formatRepoName(repo.name))}</h3>
       <p>${description}</p>
       ${parent}
       <div class="chips">
