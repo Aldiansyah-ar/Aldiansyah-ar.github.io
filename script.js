@@ -22,7 +22,6 @@ const EXCLUDED_REPOS = new Set([
 const repoContainer = document.getElementById("github-repos");
 const repoStatus = document.getElementById("github-repos-status");
 
-/* ---------- Helpers ---------- */
 function formatDate(iso) {
   return new Date(iso).toLocaleDateString("en-US", {
     year: "numeric",
@@ -53,6 +52,32 @@ function createRepoCard(repo) {
   const article = document.createElement("article");
   article.className = "project";
 
+  // --- Jadikan seluruh card sebagai link ke repo ---
+  article.tabIndex = 0;
+  article.setAttribute("role", "link");
+  article.setAttribute(
+    "aria-label",
+    `Open ${formatRepoName(repo.name)} on GitHub (opens in new tab)`
+  );
+  article.style.cursor = "pointer";
+
+  const openRepo = () => {
+    window.open(repo.html_url, "_blank", "noopener,noreferrer");
+  };
+
+  article.addEventListener("click", (e) => {
+    // Biarkan link di dalam card (mis. fork source) tetap berfungsi normal
+    if (e.target.closest("a")) return;
+    openRepo();
+  });
+
+  article.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      openRepo();
+    }
+  });
+
   const description = repo.description
     ? escapeHtml(repo.description)
     : "No description provided.";
@@ -80,9 +105,6 @@ function createRepoCard(repo) {
         ${starsChip}
         ${forksChip}
       </div>
-      <a class="text-link" href="${repo.html_url}" target="_blank" rel="noopener">
-        View on GitHub ↗
-      </a>
     </div>
   `;
   return article;
