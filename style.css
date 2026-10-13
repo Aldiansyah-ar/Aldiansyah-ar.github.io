@@ -197,9 +197,21 @@ h1 span { color: #777b8a; }
 }
 .two-col h2 { margin-bottom: 0; }
 
+.content p {
+  text-align: justify;
+  text-justify: inter-word;  
+  hyphens: auto;              
+  -webkit-hyphens: auto;
+}
 .content {
   color: var(--muted);
   max-width: 720px;
+}
+.content p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 .content p + p { margin-top: 18px; }
 
@@ -236,6 +248,13 @@ h3 {
   opacity: 1;
 }
 
+.project p {
+  color: var(--muted);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
