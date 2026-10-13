@@ -5,74 +5,178 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Aldi's Portfolio.">
   <title>Aldi's Portfolio</title>
+
+  <!-- Tailwind CSS (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            night:    '#090a0f',
+            panel:    '#10121a',
+            panel2:   '#151824',
+            ink:      '#f2f3f7',
+            muted:    '#a5a9b8',
+            line:     '#252936',
+            accent:   '#9d7cff',
+            accent2:  '#68e0c1',
+          },
+          fontFamily: {
+            sans: ['Manrope', 'system-ui', 'sans-serif'],
+            mono: ['"DM Mono"', 'monospace'],
+          },
+          maxWidth: { site: '1160px' },
+        },
+      },
+    };
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Sisa custom style (minimal) -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="site-header">
-    <nav class="nav container">
-      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-      <div class="nav-links">
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
+
+<body class="bg-night text-ink font-sans leading-relaxed antialiased overflow-x-hidden">
+
+  <!-- ================= HEADER ================= -->
+  <header class="fixed inset-x-0 top-0 z-10 bg-night/80 backdrop-blur-lg border-b border-white/5">
+    <nav class="max-w-site mx-auto px-5 w-full h-[74px] flex items-center justify-end gap-3">
+      <button class="menu-toggle hidden max-md:block text-2xl leading-none text-ink hover:text-accent2 transition-colors"
+              aria-label="Toggle navigation">☰</button>
+
+      <div class="nav-links flex items-center gap-[26px] text-[.82rem] text-muted">
+        <a href="#about"    class="transition-colors hover:text-ink">About Me</a>
+        <a href="#projects" class="transition-colors hover:text-ink">Projects</a>
       </div>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1>Aldiansyah<br><span>Anugrah Ramadhan</span></h1>
-          <div class="hero-socials">
-            <a href="https://github.com/Aldiansyah-ar"><img src="https://skillicons.dev/icons?i=github" alt="GitHub" /></a>
-            <a href="https://linkedin.com/in/aldiansyah-ar"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" /></a>
-            <a href="mailto:aldiansyahaldi621@gmail.com"><img src="https://skillicons.dev/icons?i=gmail" alt="Email" /></a>
-            <a href="https://wa.me/6281394986468"><img src="assets/icons/whatsapp.png" width="48" height="48" alt="WhatsApp" /></a>
-            <a href="https://instagram.com/aldi.okidoki"><img src="https://skillicons.dev/icons?i=instagram" alt="Instagram" /></a>
+    <!-- ================= HERO ================= -->
+    <section id="home"
+             class="min-h-screen flex flex-col justify-center pt-[134px] pb-20">
+
+      <div class="max-w-site mx-auto px-5 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-[1.15fr_.85fr] gap-16 items-center">
+
+          <!-- Text -->
+          <div>
+            <h1 class="text-[clamp(2rem,5.5vw,4.5rem)] leading-[.95] tracking-[-.06em] mb-8">
+              Aldiansyah<br>
+              <span class="stroke-text">Anugrah Ramadhan</span>
+            </h1>
+
+            <!-- Socials -->
+            <div class="flex flex-wrap items-center gap-3">
+              <a href="https://github.com/Aldiansyah-ar"
+                 class="grid place-items-center w-11 h-11 border border-line rounded-xl bg-white/[.02] transition-all duration-200 hover:-translate-y-[3px] hover:border-accent hover:bg-accent/10">
+                <img src="https://skillicons.dev/icons?i=github" alt="GitHub" class="w-6 h-6">
+              </a>
+              <a href="https://linkedin.com/in/aldiansyah-ar"
+                 class="grid place-items-center w-11 h-11 border border-line rounded-xl bg-white/[.02] transition-all duration-200 hover:-translate-y-[3px] hover:border-accent hover:bg-accent/10">
+                <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" class="w-6 h-6">
+              </a>
+              <a href="mailto:aldiansyahaldi621@gmail.com"
+                 class="grid place-items-center w-11 h-11 border border-line rounded-xl bg-white/[.02] transition-all duration-200 hover:-translate-y-[3px] hover:border-accent hover:bg-accent/10">
+                <img src="https://skillicons.dev/icons?i=gmail" alt="Email" class="w-6 h-6">
+              </a>
+              <a href="https://wa.me/6281394986468"
+                 class="grid place-items-center w-11 h-11 border border-line rounded-xl bg-white/[.02] transition-all duration-200 hover:-translate-y-[3px] hover:border-accent hover:bg-accent/10">
+                <img src="assets/icons/whatsapp.png" alt="WhatsApp" class="w-6 h-6">
+              </a>
+              <a href="https://instagram.com/aldi.okidoki"
+                 class="grid place-items-center w-11 h-11 border border-line rounded-xl bg-white/[.02] transition-all duration-200 hover:-translate-y-[3px] hover:border-accent hover:bg-accent/10">
+                <img src="https://skillicons.dev/icons?i=instagram" alt="Instagram" class="w-6 h-6">
+              </a>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex flex-wrap gap-3 mt-8">
+              <a class="inline-flex items-center gap-2 px-5 py-3 border border-line rounded-full text-sm font-bold
+                        transition-all duration-200 hover:border-accent hover:bg-accent/10 hover:-translate-y-0.5"
+                 href="/assets/documents/CV Aldiansyah Anugrah Ramadhan.pdf" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                     class="w-4 h-4 shrink-0">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download CV
+              </a>
+            </div>
           </div>
-          <div class="hero-actions">
-            <a class="btn cv" href="#projects">View Projects</a>
-            <a class="btn cv" href="/assets/documents/CV Aldiansyah Anugrah Ramadhan.pdf" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                <polyline points="7 10 12 15 17 10"/>
-                <line x1="12" y1="15" x2="12" y2="3"/>
-              </svg>
-              Download CV
-            </a>
+
+          <!-- Photo (dari folder yang sama dengan CV) -->
+          <div class="relative mx-auto w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] lg:w-[360px] lg:h-[360px]">
+            <!-- glow -->
+            <div class="absolute inset-0 rounded-full bg-gradient-to-br from-accent to-accent2 blur-3xl opacity-30"></div>
+            <!-- gradient ring -->
+            <div class="relative w-full h-full rounded-full p-[3px] bg-gradient-to-br from-accent to-accent2">
+              <img src="assets/documents/photo.jpg"
+                   alt="Aldiansyah Anugrah Ramadhan"
+                   class="w-full h-full object-cover rounded-full">
+            </div>
           </div>
+
         </div>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="container two-col">
-        <div>
-          <h2>About Me</h2>
-        </div>
-        <div class="content">
-          <p>
-            Master’s graduate in Computational Science from Bandung Institute of Technology (ITB), with a thesis focused on computational fluid
-            dynamics simulation using Python. I have strong interest in AI, data engineering and software engineering. I also hold a Bachelor’s degree
-            in Physics from ITB, with a final project focused on gravitational waves analysis.
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="py-[85px] md:py-[120px] border-t border-line">
+      <div class="max-w-site mx-auto px-5 w-full grid grid-cols-1 lg:grid-cols-[.75fr_1.25fr] gap-6 lg:gap-[100px] items-start">
+
+        <h2 class="text-[clamp(2rem,4vw,3.6rem)] leading-[1.05] tracking-[-.055em] mb-8 lg:mb-0">
+          About Me
+        </h2>
+
+        <div class="text-muted max-w-[720px]">
+          <p class="text-justify hyphens-auto">
+            Master's graduate in Computational Science from Bandung Institute of Technology (ITB),
+            with a thesis focused on computational fluid dynamics simulation using Python.
+            I have strong interest in AI, data engineering and software engineering. I also hold
+            a Bachelor's degree in Physics from ITB, with a final project focused on gravitational
+            waves analysis.
           </p>
-          <p>
-            I have experience in AI and software engineering. My expertise encompasses on AI and software engineering, utilizing tools such as Python, 
-            SQL and NoSQL databases, and JavaScript. My goals are to advance my knowledge in AI model development and solve complex problems by leveraging my technical background.
+          <p class="text-justify hyphens-auto mt-[18px]">
+            I have experience in AI and software engineering. My expertise encompasses on AI and
+            software engineering, utilizing tools such as Python, SQL and NoSQL databases, and
+            JavaScript. My goals are to advance my knowledge in AI model development and solve
+            complex problems by leveraging my technical background.
           </p>
         </div>
+
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Projects</h2>
-        <p id="github-repos-status" class="repos-status" aria-live="polite"></p>
-        <div id="github-repos" class="project-grid"></div>
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="py-[85px] md:py-[120px] border-t border-line">
+      <div class="max-w-site mx-auto px-5 w-full">
+        <h2 class="text-[clamp(2rem,4vw,3.6rem)] leading-[1.05] tracking-[-.055em] mt-[18px] mb-[45px]">
+          Projects
+        </h2>
+        <p id="github-repos-status"
+           class="repos-status text-sm opacity-75 mb-6"
+           aria-live="polite"></p>
+        <div id="github-repos"
+             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[18px]"></div>
       </div>
     </section>
+  </main>
 
-  <footer><div class="container">© <span id="year"></span> Aldiansyah Anugrah Ramadhan</div></footer>
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-line py-[25px] text-muted font-mono text-[.7rem]">
+    <div class="max-w-site mx-auto px-5 w-full">
+      © <span id="year"></span> Aldiansyah Anugrah Ramadhan
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
